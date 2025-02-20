@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: url('images/header.jpg') center/cover no-repeat;
+}
+
+.header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+}
+
+.navbar .navbar-links {
+    display: flex;
+}
+
+.navbar .navbar-links a {
+    display: inline-block;
+}
+
+.navbar .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar .navbar-links a {
+    padding: 15px;
+}
+
+/* Video Grid */
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.thumb {
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.thumb:hover {
+    transform: scale(1.02);
+}
+
+.thumb video {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    #main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #main {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .navbar .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar .navbar-links.active {
+        display: flex;
+    }
+}

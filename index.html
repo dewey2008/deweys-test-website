@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORNERSTONE Church</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>CORNERSTONE CHURCH</h1>
+            <p>Stronger Together</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <div class="navbar-links" id="navbar-links">
+            <a href="#">About Us</a>
+            <a href="#">Missions</a>
+            <a href="#">Social Media</a>
+            <a href="#">Testimonies</a>
+            <a href="#">Prayer</a>
+            <a href="#">Bulletin</a>
+            <a href="#">Healing</a>
+            <a href="#">Devotion</a>
+            <a href="#">Give</a>
+            <a href="#">Youth</a>
+        </div>
+    </nav>
+
+    <!-- Video Gallery -->
+    <div id="main">
+        <article class="thumb">
+            <video src="videos/wednesday/wednsday-02-19-25 Jeff.mp4" controls></video>
+            <b>Fruit Of Your Lips</b>
+            <p class="text-muted">Wednsday 02-19-25</p>
+        </article>
+
+        <article class="thumb">
+            <video src="videos/sundays/sunday 2-16-25 Bill Ellenwood II.mp4" controls></video>
+            <b>Remnant Church Part 6 - Forgiveness Part 2</b>
+            <p>Sunday 02-16-25</p>
+        </article>
+
+        <article class="thumb">
+            <video src="videos/wednesday/wednesday 02-12-25 Bill Ellenwood II.mp4" controls></video>
+            <b>David & His Mighty Men</b>
+            <p>Wednsday-02-12-25</p>
+        </article>
+
+        <article class="thumb">
+            <video src="videos/sundays/sunday 2-09-25 Bill Ellenwood II.mp4" controls></video>
+            <b>Remnant Church Part 5 - Forgiveness</b>
+            <p>Sunday 02-09-25</p>
+        </article>
+
+        <article class="thumb">
+            <video src="videos/wednesday/wednesday 02-05-25 Jenn Wagner.mp4" controls></video>
+            <b>Be Intentional</b>
+            <p>Wednsday 02-05-25</p>
+        </article>
+
+        <article class="thumb">
+            <video src="videos/sundays/sunday 02-02-25 Bill Ellenwood.mp4" controls></video>
+            <b>Remnant Church Part 4 - Genuine Faith</b>
+            <p>Sunday 02-02-25</p>
+        </article>
+    </div>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        menuIcon.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
